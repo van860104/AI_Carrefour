@@ -245,10 +245,11 @@ class ViewController: UIViewController,controlaudio,AudioControllerDelegate {
 //        }
 
         if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "popview") as? ChatViewController {
-            if (lbresultwords.text != ""){
+            if (lbresultwords.text != "" && lbresultwords.text != "請輸入欲查詢商品名稱" ){
                 viewController.labeltext = lbresultwords.text!
                 self.present(viewController, animated: true, completion: nil)
             }
+           
         }
     }
     

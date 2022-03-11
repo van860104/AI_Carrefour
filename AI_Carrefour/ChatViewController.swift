@@ -24,10 +24,24 @@ class ChatViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer1:)))
         item1.isUserInteractionEnabled = true
         item1.addGestureRecognizer(tapGestureRecognizer)
-        
+        item1.roundCorners([.topLeft], radius: 10)
+        let tapGestureRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer2:)))
+        item2.isUserInteractionEnabled = true
+        item2.addGestureRecognizer(tapGestureRecognizer2)
+        item2.roundCorners([.topRight], radius: 10)
+        let tapGestureRecognizer3 = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer3:)))
+        item3.isUserInteractionEnabled = true
+        item3.addGestureRecognizer(tapGestureRecognizer3)
+        item3.roundCorners([.bottomLeft], radius: 10)
+        let tapGestureRecognizer4 = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer4:)))
+        item4.isUserInteractionEnabled = true
+        item4.addGestureRecognizer(tapGestureRecognizer4)
+        item4.roundCorners([.bottomRight], radius: 10)
         textView.text = labeltext
      
         //        userinfo.contentInset = UIEdgeInsets(top: 12, left: 5, bottom: 12, right: 5)
@@ -44,21 +58,60 @@ class ChatViewController: UIViewController, UITextViewDelegate {
         
     }
     
-    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    @objc func imageTapped(tapGestureRecognizer1: UITapGestureRecognizer)
     {
        
-       
-        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "mapview") as? MapViewController {
-            self.present(viewController, animated: true, completion: nil)
-            
+        let mapview = MapViewController()
+        mapview.modalPresentationStyle = .automatic
+        mapview.view.backgroundColor = .white
+        present(mapview,animated: true, completion: nil)
         
-        }
+    
+    }
+    
+    @objc func imageTapped(tapGestureRecognizer2: UITapGestureRecognizer)
+    {
+       
+        let mapview = MapViewController()
+        mapview.modalPresentationStyle = .automatic
+        mapview.view.backgroundColor = .white
+        present(mapview,animated: true, completion: nil)
+        
+    
     }
     
     
-   
+    @IBAction func test2(_ sender: Any) {
+        
+        
+                    
+    }
     
-    @IBOutlet weak var buttonsStack: UIStackView!
+    @objc func imageTapped(tapGestureRecognizer3: UITapGestureRecognizer)
+    {
+       
+        let mapview = MapViewController()
+        mapview.modalPresentationStyle = .automatic
+        mapview.view.backgroundColor = .white
+        present(mapview,animated: true, completion: nil)
+        
+    
+    }
+    
+    
+    
+    @objc func imageTapped(tapGestureRecognizer4: UITapGestureRecognizer)
+    {
+       
+        let mapview = MapViewController()
+        mapview.modalPresentationStyle = .automatic
+        mapview.view.backgroundColor = .white
+        present(mapview,animated: true, completion: nil)
+        
+    
+    }
+    
+    
 
 
     @IBOutlet weak var textview: UITextView!
@@ -93,15 +146,32 @@ class ChatViewController: UIViewController, UITextViewDelegate {
     @IBAction func goback(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
+//
     func textViewDidChange(_ textView: UITextView) {
-        let size = CGSize(width: view.frame.width, height: .infinity)
-        let estimatedSize = textView.sizeThatFits(size)
-        
-        textView.constraints.forEach { (constraint) in
-            if constraint.firstAttribute == .height {
-                constraint.constant = estimatedSize.height
-            }
-        }
+//        let size = CGSize(width: view.frame.width, height: .infinity)
+//        let estimatedSize = textView.sizeThatFits(size)
+//
+//        textView.constraints.forEach { (constraint) in
+//            if constraint.firstAttribute == .height {
+//                constraint.constant = estimatedSize.height
+//            }
+//        }
+//            let fixedWidth = textView.frame.size.width
+//            let newSize = textView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
+//            textView.frame.size = CGSize(width: max(newSize.width, fixedWidth), height: newSize.height)
+//
+    }
+    
+    
+}
+
+extension UIImageView {
+    public func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
+        let maskPath = UIBezierPath(roundedRect: bounds,
+                                    byRoundingCorners: corners,
+                                    cornerRadii: CGSize(width: radius, height: radius))
+        let shape = CAShapeLayer()
+        shape.path = maskPath.cgPath
+        layer.mask = shape
     }
 }
