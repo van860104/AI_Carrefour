@@ -65,14 +65,14 @@ class ChatViewController: UIViewController, UITextViewDelegate {
         mapview.modalPresentationStyle = .automatic
         mapview.view.backgroundColor = .white
         present(mapview,animated: true, completion: nil)
+       
         
-    
     }
     
     @objc func imageTapped(tapGestureRecognizer2: UITapGestureRecognizer)
     {
        
-        let mapview = MapViewController()
+        let mapview = RecommendRankViewController()
         mapview.modalPresentationStyle = .automatic
         mapview.view.backgroundColor = .white
         present(mapview,animated: true, completion: nil)
@@ -90,7 +90,7 @@ class ChatViewController: UIViewController, UITextViewDelegate {
     @objc func imageTapped(tapGestureRecognizer3: UITapGestureRecognizer)
     {
        
-        let mapview = MapViewController()
+        let mapview = LowpriceViewController()
         mapview.modalPresentationStyle = .automatic
         mapview.view.backgroundColor = .white
         present(mapview,animated: true, completion: nil)
@@ -103,7 +103,7 @@ class ChatViewController: UIViewController, UITextViewDelegate {
     @objc func imageTapped(tapGestureRecognizer4: UITapGestureRecognizer)
     {
        
-        let mapview = MapViewController()
+        let mapview = HighViewController()
         mapview.modalPresentationStyle = .automatic
         mapview.view.backgroundColor = .white
         present(mapview,animated: true, completion: nil)

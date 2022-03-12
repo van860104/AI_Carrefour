@@ -23,7 +23,7 @@ class poprecording: UIViewController {
     var mytext = String()
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.text = mytext
+        //label.text = mytext
         popupView.layer.cornerRadius =	 10
         popupView.layer.masksToBounds = true
 

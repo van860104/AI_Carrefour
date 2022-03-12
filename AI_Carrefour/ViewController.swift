@@ -64,7 +64,7 @@ class ViewController: UIViewController,controlaudio,AudioControllerDelegate {
         nc.addObserver(self, selector: #selector(appMovedToForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
         
         print(tmpURL.absoluteString)
-        // 設定錄音品質
+        // 設定錄音品質wav
         let audioSettings: [String : Any] = [AVFormatIDKey: Int(kAudioFormatLinearPCM),
                                            AVSampleRateKey: 44100.0,
                                            AVNumberOfChannelsKey: 1,
