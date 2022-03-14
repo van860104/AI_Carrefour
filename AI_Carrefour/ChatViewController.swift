@@ -13,7 +13,7 @@ class ChatViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var textView: UITextView!
   
-    @IBOutlet weak var label: UILabel!
+    
     var labeltext = String()
     
     
@@ -26,26 +26,29 @@ class ChatViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         
         
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer1:)))
+        let tapGestureRecognizer1 = UITapGestureRecognizer(target: self, action: #selector(imageTapped1(tapGestureRecognizer1:)))
         item1.isUserInteractionEnabled = true
-        item1.addGestureRecognizer(tapGestureRecognizer)
+        item1.addGestureRecognizer(tapGestureRecognizer1)
         item1.roundCorners([.topLeft], radius: 10)
-        let tapGestureRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer2:)))
+        
+        let tapGestureRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(imageTapped2(tapGestureRecognizer2:)))
         item2.isUserInteractionEnabled = true
         item2.addGestureRecognizer(tapGestureRecognizer2)
         item2.roundCorners([.topRight], radius: 10)
-        let tapGestureRecognizer3 = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer3:)))
+        
+        let tapGestureRecognizer3 = UITapGestureRecognizer(target: self, action: #selector(imageTapped3(tapGestureRecognizer3:)))
         item3.isUserInteractionEnabled = true
         item3.addGestureRecognizer(tapGestureRecognizer3)
         item3.roundCorners([.bottomLeft], radius: 10)
-        let tapGestureRecognizer4 = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer4:)))
+        
+        let tapGestureRecognizer4 = UITapGestureRecognizer(target: self, action: #selector(imageTapped4(tapGestureRecognizer4:)))
         item4.isUserInteractionEnabled = true
         item4.addGestureRecognizer(tapGestureRecognizer4)
         item4.roundCorners([.bottomRight], radius: 10)
         textView.text = labeltext
      
-        //        userinfo.contentInset = UIEdgeInsets(top: 12, left: 5, bottom: 12, right: 5)
-        
+//                userinfo.contentInset = UIEdgeInsets(top: 12, left: 5, bottom: 12, right: 5)
+//
 //        userinfo.isEditable = false
 //        userinfo.isUserInteractionEnabled = false
         textView.layer.cornerRadius = 10
@@ -58,7 +61,7 @@ class ChatViewController: UIViewController, UITextViewDelegate {
         
     }
     
-    @objc func imageTapped(tapGestureRecognizer1: UITapGestureRecognizer)
+    @objc func imageTapped1(tapGestureRecognizer1: UITapGestureRecognizer)
     {
        
         let mapview = MapViewController()
@@ -69,13 +72,19 @@ class ChatViewController: UIViewController, UITextViewDelegate {
         
     }
     
-    @objc func imageTapped(tapGestureRecognizer2: UITapGestureRecognizer)
+    @objc func imageTapped2(tapGestureRecognizer2: UITapGestureRecognizer)
     {
        
-        let mapview = RecommendRankViewController()
-        mapview.modalPresentationStyle = .automatic
-        mapview.view.backgroundColor = .white
-        present(mapview,animated: true, completion: nil)
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let recommedView = storyboard.instantiateViewController(withIdentifier: "recommedView") as! RecommendRankViewController
+//        self.present(recommedView, animated: true)
+
+    
+//        let recommedView = RecommendRankViewController()
+//
+//        recommedView.modalPresentationStyle = .automatic
+//        recommedView.view.backgroundColor = .white
+//        present(recommedView,animated: true, completion: nil)
         
     
     }
@@ -87,26 +96,25 @@ class ChatViewController: UIViewController, UITextViewDelegate {
                     
     }
     
-    @objc func imageTapped(tapGestureRecognizer3: UITapGestureRecognizer)
+    @objc func imageTapped3(tapGestureRecognizer3: UITapGestureRecognizer)
     {
        
-        let mapview = LowpriceViewController()
-        mapview.modalPresentationStyle = .automatic
-        mapview.view.backgroundColor = .white
-        present(mapview,animated: true, completion: nil)
+//        let lowpriceview = LowpriceViewController()
+//        lowpriceview.modalPresentationStyle = .automatic
+//        lowpriceview.view.backgroundColor = .white
+//        present(lowpriceview,animated: true, completion: nil)
         
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let recommedView = storyboard.instantiateViewController(withIdentifier: "recommedView") as! LowRankViewController
+        recommedView.textFiled = textview.text
+        self.present(recommedView, animated: true)
     
     }
     
-    
-    
-    @objc func imageTapped(tapGestureRecognizer4: UITapGestureRecognizer)
+    @objc func imageTapped4(tapGestureRecognizer4: UITapGestureRecognizer)
     {
        
-        let mapview = HighViewController()
-        mapview.modalPresentationStyle = .automatic
-        mapview.view.backgroundColor = .white
-        present(mapview,animated: true, completion: nil)
+      
         
     
     }
@@ -161,6 +169,13 @@ class ChatViewController: UIViewController, UITextViewDelegate {
 //            textView.frame.size = CGSize(width: max(newSize.width, fixedWidth), height: newSize.height)
 //
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//          if let destination = segue.destination as? RecommendRankViewController {
+//              
+//              destination.textFiled = "13455678"
+//          }
+//    }
     
     
 }

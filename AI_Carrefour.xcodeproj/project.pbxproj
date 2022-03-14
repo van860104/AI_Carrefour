@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		635355B327DC3BF300264A0D /* RecommendRankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635355B227DC3BF300264A0D /* RecommendRankViewController.swift */; };
-		635355B527DC3EB200264A0D /* LowpriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635355B427DC3EB200264A0D /* LowpriceViewController.swift */; };
-		635355B727DC3ED900264A0D /* HighViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635355B627DC3ED900264A0D /* HighViewController.swift */; };
-		63ED35F527DC763C00579B1E /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ED35F327DC763C00579B1E /* MovieTableViewCell.swift */; };
-		63ED35F627DC763C00579B1E /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63ED35F427DC763C00579B1E /* MovieTableViewCell.xib */; };
+		635355B327DC3BF300264A0D /* LowRankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635355B227DC3BF300264A0D /* LowRankViewController.swift */; };
+		63ED35F527DC763C00579B1E /* LowProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ED35F327DC763C00579B1E /* LowProductTableViewCell.swift */; };
+		63ED35F627DC763C00579B1E /* LowProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63ED35F427DC763C00579B1E /* LowProductTableViewCell.xib */; };
 		D24C6B4F545A4A956E4816CC /* Pods_AI_Carrefour.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C886BC42E772FD8FD14FE083 /* Pods_AI_Carrefour.framework */; };
 		FF770CAD27D6EA7D0083B809 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF770CAC27D6EA7D0083B809 /* ChatViewController.swift */; };
 		FF77A39F27D07F90004FB0DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF77A39E27D07F90004FB0DA /* AppDelegate.swift */; };
@@ -34,11 +32,9 @@
 
 /* Begin PBXFileReference section */
 		3ACA73352B1DC870BA73268C /* Pods-AI_Carrefour.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AI_Carrefour.release.xcconfig"; path = "Target Support Files/Pods-AI_Carrefour/Pods-AI_Carrefour.release.xcconfig"; sourceTree = "<group>"; };
-		635355B227DC3BF300264A0D /* RecommendRankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendRankViewController.swift; sourceTree = "<group>"; };
-		635355B427DC3EB200264A0D /* LowpriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowpriceViewController.swift; sourceTree = "<group>"; };
-		635355B627DC3ED900264A0D /* HighViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighViewController.swift; sourceTree = "<group>"; };
-		63ED35F327DC763C00579B1E /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
-		63ED35F427DC763C00579B1E /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
+		635355B227DC3BF300264A0D /* LowRankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowRankViewController.swift; sourceTree = "<group>"; };
+		63ED35F327DC763C00579B1E /* LowProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowProductTableViewCell.swift; sourceTree = "<group>"; };
+		63ED35F427DC763C00579B1E /* LowProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LowProductTableViewCell.xib; sourceTree = "<group>"; };
 		906DCB29A7BEE944CACAA5B7 /* Pods-AI_Carrefour.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AI_Carrefour.debug.xcconfig"; path = "Target Support Files/Pods-AI_Carrefour/Pods-AI_Carrefour.debug.xcconfig"; sourceTree = "<group>"; };
 		C886BC42E772FD8FD14FE083 /* Pods_AI_Carrefour.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AI_Carrefour.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF770CAC27D6EA7D0083B809 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -118,13 +114,11 @@
 				FF77A3A027D07F90004FB0DA /* SceneDelegate.swift */,
 				FF77A3A227D07F90004FB0DA /* ViewController.swift */,
 				FF77A3A427D07F90004FB0DA /* Main.storyboard */,
-				63ED35F327DC763C00579B1E /* MovieTableViewCell.swift */,
-				63ED35F427DC763C00579B1E /* MovieTableViewCell.xib */,
-				635355B427DC3EB200264A0D /* LowpriceViewController.swift */,
-				635355B627DC3ED900264A0D /* HighViewController.swift */,
+				63ED35F327DC763C00579B1E /* LowProductTableViewCell.swift */,
+				63ED35F427DC763C00579B1E /* LowProductTableViewCell.xib */,
 				FF79352127D12AF90010FE13 /* GIFsupport.swift */,
 				FF77A3B227D08FC3004FB0DA /* poprecording.swift */,
-				635355B227DC3BF300264A0D /* RecommendRankViewController.swift */,
+				635355B227DC3BF300264A0D /* LowRankViewController.swift */,
 				FF770CAC27D6EA7D0083B809 /* ChatViewController.swift */,
 				FF77A3A927D07F93004FB0DA /* LaunchScreen.storyboard */,
 				FFC07E4827D465A3002C90AA /* ScanViewController.swift */,
@@ -203,7 +197,7 @@
 			files = (
 				FF79352827D133C50010FE13 /* wave.gif in Resources */,
 				FF77A3AB27D07F93004FB0DA /* LaunchScreen.storyboard in Resources */,
-				63ED35F627DC763C00579B1E /* MovieTableViewCell.xib in Resources */,
+				63ED35F627DC763C00579B1E /* LowProductTableViewCell.xib in Resources */,
 				FF79352E27D139970010FE13 /* wave4.gif in Resources */,
 				FF79352C27D139200010FE13 /* wave3.gif in Resources */,
 				FF79352427D12B990010FE13 /* Assets.xcassets in Resources */,
@@ -262,11 +256,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFF6026127D5EFFD0076AB8E /* AudioController.swift in Sources */,
-				635355B727DC3ED900264A0D /* HighViewController.swift in Sources */,
-				63ED35F527DC763C00579B1E /* MovieTableViewCell.swift in Sources */,
-				635355B327DC3BF300264A0D /* RecommendRankViewController.swift in Sources */,
+				63ED35F527DC763C00579B1E /* LowProductTableViewCell.swift in Sources */,
+				635355B327DC3BF300264A0D /* LowRankViewController.swift in Sources */,
 				FF77A3A327D07F90004FB0DA /* ViewController.swift in Sources */,
-				635355B527DC3EB200264A0D /* LowpriceViewController.swift in Sources */,
 				FF77A3B327D08FC3004FB0DA /* poprecording.swift in Sources */,
 				FFB15F4F27DB3E0300AF9A8A /* MapViewController.swift in Sources */,
 				FFF6026227D5EFFD0076AB8E /* SpeechRecognitionService.swift in Sources */,
@@ -424,7 +416,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZK5C894KBC;
+				DEVELOPMENT_TEAM = H526C9PPTW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AI_Carrefour/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "AI-Carrefour";
@@ -444,7 +436,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.group5.AI-Carrefour";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myhomework.AI-Carrefour";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -460,7 +452,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZK5C894KBC;
+				DEVELOPMENT_TEAM = H526C9PPTW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AI_Carrefour/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "AI-Carrefour";
@@ -480,7 +472,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.group5.AI-Carrefour";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myhomework.AI-Carrefour";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

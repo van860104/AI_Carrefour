@@ -18,7 +18,7 @@ class poprecording: UIViewController {
     
     @IBOutlet weak var popupView: UIView!
     
-    @IBOutlet weak var label: UILabel!
+
     
     var mytext = String()
     override func viewDidLoad() {

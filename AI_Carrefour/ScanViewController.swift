@@ -110,6 +110,7 @@ class ScanViewController: UIViewController,UIImagePickerControllerDelegate, UINa
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
            guard let pickedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else { return }
+        
            img.image = pickedImage
            dismiss(animated: true, completion: nil)
        }

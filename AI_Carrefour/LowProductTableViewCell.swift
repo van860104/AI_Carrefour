@@ -1,5 +1,5 @@
 //
-//  MovieTableViewCell.swift
+//  LowProductTableViewCell.swift
 //  Movie Searcher
 //
 //  Created by Afraz Siddiqui on 3/22/20.
@@ -8,19 +8,21 @@
 
 import UIKit
 
-class MovieTableViewCell: UITableViewCell {
+class LowProductTableViewCell: UITableViewCell {
 //    UITableViewCell父类是UIView
 //  UITableView的每一行都是一个UITableViewCell/UITableViewCell的类型
 //    按加载来区分动态cell:cell的内容在运行时才能确定
 //    静态cell:cell的内容一开始已经确定
+   
 
-
-    @IBOutlet var movieTitleLabel: UILabel!
-    @IBOutlet var movieYearLabel: UILabel!
-    @IBOutlet var moviePosterImageView: UIImageView!
+    
+    @IBOutlet var productNameLabel: UILabel!
+    @IBOutlet var productPriceLabel: UILabel!
+    @IBOutlet var productImageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -32,11 +34,11 @@ class MovieTableViewCell: UITableViewCell {
 
 
 
-    static let identifier = "MovieTableViewCell"
+    static let identifier = "LowProductTableViewCell"
 //建構宣告一個表格名
 
     static func nib() -> UINib {
-        return UINib(nibName: "MovieTableViewCell",
+        return UINib(nibName: "LowProductTableViewCell",
                      bundle: nil)
     }
 //NIB 和 XIB 是描述用戶界面的文件建構一個nib檔的功能
@@ -45,15 +47,15 @@ class MovieTableViewCell: UITableViewCell {
 
 
 
-    func configure(with model: Movie)
+    func configure(with model: Product)
 
     {
-        self.movieTitleLabel.text = model.name
-        self.movieYearLabel.text = model.price
+        self.productNameLabel.text = model.name
+        self.productPriceLabel.text = model.price
         let url = model.pic
 //使用網址上的資料如果有錯誤就報錯
         if let data = try? Data(contentsOf: URL(string: url)!) {
-            self.moviePosterImageView.image = UIImage(data: data)
+            self.productImageView.image = UIImage(data: data)
 //使用網路上的文字及圖片
         }
     }
